@@ -94,6 +94,10 @@ Without root there is currently no known workaround without user interaction. As
 
 Be aware that a lot of other apps are not aware of this change in Android 6.0 and may still seem to work on first sight, because they don't confirm their operations.
 
+[[[ https://user-images.githubusercontent.com/1439229/41261716-51ce233c-6ddd-11e8-99f0-5a55dbcbfa24.png | height = 300px]]](https://user-images.githubusercontent.com/1439229/41261716-51ce233c-6ddd-11e8-99f0-5a55dbcbfa24.png)
+[[[ https://user-images.githubusercontent.com/1439229/41261718-53ea9b28-6ddd-11e8-9418-214b7bad8227.png | height = 300px]]](https://user-images.githubusercontent.com/1439229/41261718-53ea9b28-6ddd-11e8-9418-214b7bad8227.png)
+[[[ https://user-images.githubusercontent.com/1439229/41261723-561df39a-6ddd-11e8-9c75-80f82680efc7.png | height = 300px]]](https://user-images.githubusercontent.com/1439229/41261723-561df39a-6ddd-11e8-9c75-80f82680efc7.png)
+
 #### Accessibility service
 You may have seen apps that seem to achieve pre Android 6.0 behavior on unrooted Android 6.0+ devices. Meaning that they seem to be able to clear private caches on unrooted 6.0+ devices. I'll explain what they are doing and why SD Maid isn't doing it.
 
