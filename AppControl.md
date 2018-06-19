@@ -26,7 +26,11 @@ Some of these actions are only accessible in the apps details which can be reach
 Launches the app.
 
 ### Kill app
-Tries to kill the app. Without root permission this is done with [killBackgroundProcesses](http://developer.android.com/reference/android/app/ActivityManager.html). How effective this is depends on the app itself, though generally it is not that effectives for killing system apps. If root permission are available, SD Maid will use the linux `kill` applets on all pids running under that process.
+Tries to kill the app. 
+
+If root permission are available, SD Maid will use the linux `kill` applets on all pids running under that package's main process. This is final and equal to an app having never been started.
+
+There is no comparable Android function to kill an app like that without root. The closest thing available would be to manually force stop the app but this can not be done programmatically by an app (without root). SD Maid uses the only available method that is left, which is [killBackgroundProcesses](https://developer.android.com/reference/android/app/ActivityManager.html#killBackgroundProcesses(java.lang.String)). This is equal to _nicely_ asking the system to kill an app. A few exception apply though. Generally all apps run by the system user (i.e. system apps) are off-limits. If we closely look at the methods name we notice it says `Background` and might ask ourselves, "What is a background process?". As with all things Android there are different answers to that depending on your Android version. The rule of thumb is that anything that doesn't have an active user-interface element (e.g. a window or on-going notification) is considered a background process by the system. The end effect is equal to what the system does when killing an app to reclaim memory, which is what the system regularly does, and the system may also restart an app if the memory is available again. The same goes for apps killed with this method which is why there isn't much benefit to any kind of non-root "task killing/cleaning" apps.
 
 ### Force stop app
 Tries to force stop the app. Essentially the same action as you have in the systems app settings. For an app do this we need root permission. The app can't launch itself until you open it once manually. This state will persist even if SD Maid is uninstalled.
