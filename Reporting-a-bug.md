@@ -27,10 +27,15 @@ If SD Maid crashed I should have gotten an automatic crash report (unless you tu
 
 ### **Debugrun log**
 
-TL;DR
+#### If you can still open SD Maid
+1. Open SD Maid, long press Settings and click `Create Debug Trigger`.
+2. Now open SD Maid again and everything will be written into the log file until SD Maid is stopped
+3. When you are done just exit SD Maid and mail/upload the log file from `<sdcard>/Android/data/eu.thedarken.sdm/cache/logfiles`
+
+#### If SD Maid is crashing while opening
 1. Force stop SD Maid.
 2. Create the file `<sdcard>/Android/data/eu.thedarken.sdm/files/sdm_force_debug_run`
-3. Open SD Maid and everything will be written into the log file
+3. Open SD Maid again and everything will be written into the log file
 4. When you are done just exit SD Maid and mail/upload the log file from `<sdcard>/Android/data/eu.thedarken.sdm/cache/logfiles`
 
 The best thing you can provide to help fix an issue is a debug log of the problem manifesting. A debug log is a very detailed description of everything SD Maid did. Note that the file may private information in form of file names and pathes on your device.
