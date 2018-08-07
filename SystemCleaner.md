@@ -26,7 +26,11 @@ This folder contains crashtracking related files that are created by the system.
 [[[ https://user-images.githubusercontent.com/1439229/30683134-77bfadbe-9eac-11e7-8c1f-596b34992e45.png | height = 300px]]](https://user-images.githubusercontent.com/1439229/30683134-77bfadbe-9eac-11e7-8c1f-596b34992e45.png)
 
 ## UserFilter
-You can create your own filter (i.e. a "UserFilter") to target specific files for which SD Maid does offer a default filter. To create a filter open the filter manager, switch to the "User" tab and use the "+" icon. Try to make the filter as specific as possible and **make sure to check what has been sorted into it after a scan** before you start deleting.
+You can create your own filter (i.e. a "UserFilter") to target specific files for which SD Maid does offer a default filter.
+
+For simple filters you can use the Explorer action [create filter](https://github.com/d4rken/sdmaid-public/wiki/Explorer#create-filter).
+
+To manually create a filter open the filter manager, switch to the "User" tab and use the "+" icon. Try to make the filter as specific as possible and **make sure to check what has been sorted into it after a scan** before you start deleting.
 
 **Note** that a file on primary public storage (e.g. internal sdcard) may be reached through multiple pathes. In the following example all pathes may lead to the same file:
 * `/sdcard/Strawberry.pdf`
