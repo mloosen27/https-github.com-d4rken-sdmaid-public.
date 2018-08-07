@@ -101,7 +101,7 @@ Allows you to change the owner, group and other file permissions. Note that this
 Attempts to share the selected file through another app, e.g. mailing a picture. It is currently not supported to share files that the other application can not access itself.
 
 ### Create filter
-Helps you create a user filter for the [SystemCleaner](https://github.com/d4rken/sdmaid-public/wiki/SystemCleaner).
+Helps you create a user filter for the [SystemCleaner](https://github.com/d4rken/sdmaid-public/wiki/SystemCleaner). It will open the user filter creation screen and prefill a few fields such that the created filter would match the files you selected.
 
 ### Save directory structure
 Will create a text file on your primary storage (e.g. root of your sdcard) that contains the file/directory structure (recursively) of the selected items. A better way than screenshots to share specific file setups with other users (or me :p).
