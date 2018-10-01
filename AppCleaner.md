@@ -52,7 +52,8 @@ Note that SD Maid can not enforce this for all files on unrooted devices. See FA
 Skip currently running apps. If running apps are not skipped they are killed before deleting their cache. Apps will be killed 'softly', i.e. using [killBackgroundProcesses](https://developer.android.com/reference/android/app/ActivityManager.html#killBackgroundProcesses(java.lang.String)), even if root is available. For a running app the event will be similar to being killed in low memory situations. Killed background services may restart at will.
 ### Show inaccessible items
 Some items, especially on 6.0+ without root may be known to SD Maid, but can't be accessed (i.e. deleted).
-###`freeStorageAndNotify`
+
+### freeStorageAndNotify
 `freeStorageAndNotify` is a trick that can be used on some ROMs (< Android 6.0) to clear private caches without root. It basically triggers the `System>Storage>Clear Cache` action. This can be turned off because using it also clears the default public caches. If you have cache files in public caches that you don't want deleted, e.g. have exclusions for, you have to disable this function such that SD Maids exclusions can take effect (because using this function outsources some work to the system which doesn't know about SD Maids exclusions).
 
 [[[ https://cloud.githubusercontent.com/assets/1439229/19081897/360e14b0-8a5c-11e6-81a5-0bf10d6acd01.png | height = 300px]]](https://cloud.githubusercontent.com/assets/1439229/19081897/360e14b0-8a5c-11e6-81a5-0bf10d6acd01.png)
