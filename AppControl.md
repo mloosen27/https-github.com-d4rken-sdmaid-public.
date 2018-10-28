@@ -48,7 +48,7 @@ Requires root. If your device supports it, you can move apps from internal to ex
 Deletes the app and it's data. This includes the systems uninstall process as well as actions similar to SD Maids [Corpsefinder](https://github.com/d4rken/sdmaid-public/wiki/Corpsefinder). Unrooted devices have to confirm each uninstall, rooted devices can batch uninstall without extra confirmation.
 
 ### Reset app
-Returns the app to it's install state. This will the apps data, but not the app itself. Similar to `Clear data` in the systems app settings, but it also includes extra app directories outside of default directories. that the system does not know about.
+Returns the app to its install state. This will delete the apps data, but not the app itself. Similar to `Clear data` in the systems app settings, but it also includes extra app directories outside of default directories, that the system does not know about.
 
 ### Receiver manager (autostart)
 This feature requires root. It allows you to manage [BroadcastReceiver](http://developer.android.com/reference/android/content/BroadcastReceiver.html). These are Android components that can react to specific events such as incoming calls, display state changing or plugging the device in the charger. Receivers can be enabled or disabled. Similar to disabling whole apps, these actions persist even if uninstalling SD Maid. Other root tools if well written should be able to undo SD Maids operations and vice versa.
