@@ -60,6 +60,8 @@ The uninstall watcher is part of SD Maid Pro. It enables the CorpseFinder to aut
 
 [[[ https://cloud.githubusercontent.com/assets/1439229/21750088/904add74-d5ab-11e6-852e-ac60bc5b63ea.png | height = 300px]]](https://cloud.githubusercontent.com/assets/1439229/21750088/904add74-d5ab-11e6-852e-ac60bc5b63ea.png)
 [[[ https://cloud.githubusercontent.com/assets/1439229/21750087/90427d3c-d5ab-11e6-9c6e-364290426c43.png | height = 300px]]](https://cloud.githubusercontent.com/assets/1439229/21750087/90427d3c-d5ab-11e6-9c6e-364290426c43.png)
+[[[ https://user-images.githubusercontent.com/1439229/48551908-261f5380-e8d7-11e8-813b-cd18f670797d.png | height = 300px]]](https://user-images.githubusercontent.com/1439229/48551908-261f5380-e8d7-11e8-813b-cd18f670797d.png)
+
 
 ## FAQ
 ### Undetected corpses
