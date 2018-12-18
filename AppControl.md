@@ -55,9 +55,23 @@ This feature requires root. It allows you to manage [BroadcastReceiver](http://d
 
 BroadcastReceiver can listen to custom internal events (`Intent`'s) as well as predefined system events. If SD Maid can attribute the BroadcasterReceiver as being register for a specific system event, the event type will be listed below the receiver name. Note that one receiver can be responsible for multiple event types.
 
-**Use this with caution, disabling items without knowing what you are doing will cause the app to malfunction in unforseen ways.**
+_**Use this with caution, disabling items without knowing what you are doing will cause the app to malfunction in unforseen ways.**_
 
-The most popular type of receiver people are usually looking for are `ON_BOOT` receivers which allow an app to do actions after booting/rebooting the device. While a badly written app can slow down device boots significantly if executes useless actions directly after booting, it is important to note that there are many **legit** use-cases for such a receiver. Specifically in SD Maids own case, it is required to restore the alarm for the [Scheduler](https://github.com/d4rken/sdmaid-public/wiki/Scheduler).
+A broadcast receiver gives an app a short execution window after specific events happen, it does not mean the app keeps running.
+
+The most popular type of receiver people are usually looking for are `ON_BOOT` receivers which allow an app to do actions after booting/rebooting the device. `ON_BOOT` receivers are not equal to Window's autostart. While a badly written app can slow down device boots significantly if executes useless actions directly after booting, it is important to note that there are many **legit** use-cases for such a receiver. Specifically in SD Maids own case, it is required to restore the alarm for the [Scheduler](https://github.com/d4rken/sdmaid-public/wiki/Scheduler).
+
+#### Does disabling receivers improve battery life noticeably?
+Sometimes, but usually not. Work done within a `BroadcastReceiver` is restricted. A receiver has to finish in [under 10 seconds](https://developer.android.com/reference/android/content/BroadcastReceiver#goAsync()).
+
+Any longer running operation has to be run within a [`Service`](https://developer.android.com/reference/android/app/Service). A running service is usually visible via notification and since Android P is actually forced to show a notification when running. Services running without notifications are more prone to being killed by the system too! Most receivers just run a small piece of code that checks a few conditions and set something up (e.g. an alarm) or decide whether to launch a service or not. This is usually finished in less then 10ms. So the impact of a receiver on your battery depends on whether it launches a service that has an impact on your battery life ;).
+
+#### Does disabling receivers improve performance?
+In some cases, but not generally. The same caveats apply as mentioned above. To have an overall impact on performance the operation would have to keep running all the time which is just not what receivers do. That being said, it's possible to impact your performance momentarily. E.g. by disabling receivers that react to ON_BOOT you can theoretically make your device complete the boot up faster.
+
+An uncommon but not rare practice is to read some data from storage within receivers. On most Android devices the performance bottleneck is I/O, not CPU (e.g. start a large file copy and try to multitask). If an app would do large amounts of I/O during it's 10s execution window then your device could feel slow.
+
+Unless you have a collection of very badly written apps (why?!), it's more about preventing specific actions from happening, than improving performance/battery life.
 
 [[[ https://cloud.githubusercontent.com/assets/1439229/14576238/b518f436-0367-11e6-9c18-c313471908a2.png | height = 300px]]](https://cloud.githubusercontent.com/assets/1439229/14576238/b518f436-0367-11e6-9c18-c313471908a2.png)
 [[[ https://cloud.githubusercontent.com/assets/1439229/14576241/b7e336cc-0367-11e6-8ee9-c05d494acb62.png | height = 300px]]](https://cloud.githubusercontent.com/assets/1439229/14576241/b7e336cc-0367-11e6-8ee9-c05d494acb62.png)
