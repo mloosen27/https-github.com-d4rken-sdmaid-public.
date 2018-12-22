@@ -70,6 +70,7 @@ Known causes & solutions:
 * Incomplete unroot attempt. Reroot your device, then unroot it correctly.
 * You just updated SD Maid and your super user app did not handle this correctly. Try removing SD Maid from the list apps in the super user app. Reboot your device and let SD Maid request root again. If that doesn't help uninstall SD Maid, remove it from the super user app, reboot your device and reinstall SD Maid. If that doesn't help either, clear the super user apps data and reboot.
 * Sometimes the ROMs are delivered with incomplete root from the manufactor. Either root it or disable the root check in SD Maid.
+* Shortly after reboots the super-user app may take too long to respond due to too much going. Wait a bit and retry.
 
 #### During execution
 Sometimes it may look like SD Maid is hanging during a task. Make sure to wait at least 15 minutes before assuming there is an issue (and contacting me 😁 ). If you have many files, huge duplicate files or large databases it is possible for SD Maid to take up to half an hour to complete operations. You can put your phone away while waiting.
