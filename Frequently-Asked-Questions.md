@@ -141,9 +141,10 @@ This is not an SD Maid issue, but still a popular question. Apps purchased throu
 ### Google Play is not showing the purchase
 Apps are purchased per Google account, not per device. Switching devices doesn't mean you have to buy an app again. If Google Play is not showing your purchase, you are either not logged in with the account your purchased the application with or the Google Play app has not yet syncronized with your list of purchases. You can see your purchases [here](https://wallet.google.com/manage/#transactions:filter=ALL) or [here](https://play.google.com/apps). This is a Google Play issue and has no relation to SD Maid itself.
 
-The following action are known to fix this in some instances:
+The following action are known to fix this:
 * Force closing and reopening Google Play.
 * Rebooting the device.
+* Triggering the install from the [Google Play](https://play.google.com/store/apps/details?id=eu.thedarken.sdm.unlocker) website. 
 * Using "Clear Data" on the Google Play app (`com.android.vending`).
 
 ### Google Play is asking me to buy the app again
