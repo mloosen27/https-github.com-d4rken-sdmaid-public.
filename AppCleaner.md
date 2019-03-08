@@ -91,7 +91,7 @@ This is means that you can still click an entry and it will clean just that app,
 ### Cache deletion on unrooted devices running Android 6.0+
 The aforementioned `freeStorageAndNotify` trick is no longer available since Android 6.0. This means that SD Maid is not able to use this trick to delete the official private app cache on unrooted devices (i.e. `/data/data/<pkg>/cache`). SD Maid will still process official caches and all other types of expendable files on public storage.
 
-Without root there is currently no known workaround without user interaction. As a manual workaround, to achieve pre 6.0 behavior, without root, you could manually clear the official caches through _Settings>Storage>ClearCache_ and then use SD Maid to find and delete expendable files (e.g. hidden-caches) that the systems built-in functionality doesn't cover.
+Without root there is currently no known workaround without user interaction. As a manual workaround, to achieve pre 6.0 behavior, without root, you could manually clear the official caches through _Settings>Storage>ClearCache_ and then use SD Maid to find and delete expendable files (e.g. hidden-caches) that the systems built-in functionality doesn't cover. A possible compromise is the use of the "Accessibility API", [see here](https://github.com/d4rken/sdmaid-public/wiki/AppCleaner#accessibility-service).
 
 Be aware that a lot of other apps are not aware of this change in Android 6.0 and may still seem to work on first sight, because they don't confirm their operations.
 
@@ -110,7 +110,7 @@ An app "cleaning cache" this way will display a screen over everything else (i.e
 Why is this not a good solution?
 This only works while the phone is unlocked, open and not in use. Think of it as your device being tapped on by another person. Only one user can interact with the screen at a time. It's also not very fast because the app manually moves through the UI. This approach requires to open each apps settings screen and then finding and pressing the "clear cache" button. It's the only way to reliably automate this, as some UI parts are consistent between devices/ROMs and others are not. The app settings screen is consistent, the device storage screen is not. You don't have this restriction though and could just go into your devices storage screen, find and tap the cache entry and achieve the same result.
 
-SD Maid doesn't use the accessibility service this way because it's neither fast nor convenient and I don't think it's good to let an app tap around your device behind a curtain.
+SD Maid current doesn't use the accessibility service this way because it's neither fast nor convenient. There is an [on-going discussion](https://github.com/d4rken/sdmaid-public/issues/1588) about adding this here.
 
 ### Some AppCleaner exclusions don't work without root
 If you are using the AppCleaner on an unrooted device, you may have noticed that despite creating an exclusion for a specific app, it is still part of the scan results. This happens because we have to use the `freeStorageAndNotify` trick to delete the private cache files. Using this trick means that not SD Maid, but the system itself does the deletion and the system does not know about SD Maids exclusions. Since SD Maid v4.2.0+ `freeStorageAndNotify` can be turned off in the settings.
