@@ -5,10 +5,10 @@ SD Maids setup consists of a few steps where you are asked to grant SD Maid cert
 Primary storage is only required on Android 6.0+ devices. It is necessary because the general read/write permission for public storage can only be aquired during runtime since Android 6.0. Granting these permissions is mandatory as otherwise SD Maid will not function (what good is SD Maid if it can't access any files).
 Although ROOT permission superseed any other permission, even on rooted devices it needs to be granted. Trying to skip this step or abort it will close SD Maid.
 
-[[[ https://cloud.githubusercontent.com/assets/1439229/14230404/bde057c4-f955-11e5-8050-898550e8e3c0.png | height = 300px]]](https://cloud.githubusercontent.com/assets/1439229/14230404/bde057c4-f955-11e5-8050-898550e8e3c0.png)
-[[[ https://cloud.githubusercontent.com/assets/1439229/14230402/bddbf094-f955-11e5-91d6-b7a93e50c46c.png | height = 300px]]](https://cloud.githubusercontent.com/assets/1439229/14230402/bddbf094-f955-11e5-91d6-b7a93e50c46c.png)
-[[[ https://cloud.githubusercontent.com/assets/1439229/14230403/bddc000c-f955-11e5-9b4e-d557fccda9f5.png | height = 300px]]](https://cloud.githubusercontent.com/assets/1439229/14230403/bddc000c-f955-11e5-9b4e-d557fccda9f5.png)
-[[[ https://cloud.githubusercontent.com/assets/1439229/14230401/bddb7ee8-f955-11e5-8197-36870aff4f95.png | height = 300px]]](https://cloud.githubusercontent.com/assets/1439229/14230401/bddb7ee8-f955-11e5-8197-36870aff4f95.png)
+[[[ https://user-images.githubusercontent.com/1439229/55668460-fdd6c800-586a-11e9-9317-eb002d8dccbf.png | height = 300px]]](https://user-images.githubusercontent.com/1439229/55668460-fdd6c800-586a-11e9-9317-eb002d8dccbf.png)
+[[[ https://user-images.githubusercontent.com/1439229/55668463-0202e580-586b-11e9-988a-fe16fbe98476.png | height = 300px]]](https://user-images.githubusercontent.com/1439229/55668463-0202e580-586b-11e9-988a-fe16fbe98476.png)
+[[[ https://user-images.githubusercontent.com/1439229/55668465-04653f80-586b-11e9-8821-e9492db98c5f.png | height = 300px]]](https://user-images.githubusercontent.com/1439229/55668465-04653f80-586b-11e9-8821-e9492db98c5f.png)
+[[[ https://user-images.githubusercontent.com/1439229/55668466-062f0300-586b-11e9-96fa-2ef5399e3e0c.png | height = 300px]]](https://user-images.githubusercontent.com/1439229/55668466-062f0300-586b-11e9-96fa-2ef5399e3e0c.png)
 
 ## Secondary Storage Setup
 Secondary storage setup is a step that is only available on Android 5.0+. It's purpose is to grant SD Maid read/write access to storage locations through the system built-in [Android Storage Accessframework (SAF)](http://developer.android.com/guide/topics/providers/document-provider.html).
