@@ -82,6 +82,14 @@ Despite successfully granting storage access, after rebooting the procedure has 
 ##### Known solutions
 * Move SD Maid back to internal storage
 
+## Usage Statistics permission
+To accurately determine app and cache sizes SD Maid asks for the `Usage Statistics` permission, which allows SD Maid to query the system for additional app details. The method that SD Maid previously used for this purpose was locked down in Android 8.0. Features related to the AppControl and [AppCleaner tool](https://github.com/d4rken/sdmaid-public/wiki/AppCleaner#accessibility-service) require this permission.
+
+[[[https://user-images.githubusercontent.com/1439229/55668472-13e48880-586b-11e9-8fb2-eb5e011d3456.png | height = 300px]]](https://user-images.githubusercontent.com/1439229/55668472-13e48880-586b-11e9-8fb2-eb5e011d3456.png)
+[[[https://user-images.githubusercontent.com/1439229/55668473-16df7900-586b-11e9-90a0-1f53b1c3107f.png | height = 300px]]](https://user-images.githubusercontent.com/1439229/55668473-16df7900-586b-11e9-90a0-1f53b1c3107f.png)
+[[[https://user-images.githubusercontent.com/1439229/55668474-1941d300-586b-11e9-9c1b-305a5a234814.png | height = 300px]]](https://user-images.githubusercontent.com/1439229/55668474-1941d300-586b-11e9-9c1b-305a5a234814.png)
+[[[https://user-images.githubusercontent.com/1439229/55668476-1ba42d00-586b-11e9-92b1-3932f2135168.png | height = 300px]]](https://user-images.githubusercontent.com/1439229/55668476-1ba42d00-586b-11e9-92b1-3932f2135168.png)
+
 ## Binary setup
 Binaries are extra files that SD Maid sets up on first run. These binaries are required for SD Maid to run. SD Maid itself has compatible binaries for the architectures X86, MIPS and ARM. Normally this all happens automatically and you don't have to do anything.
 
