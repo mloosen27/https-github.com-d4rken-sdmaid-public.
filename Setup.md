@@ -38,7 +38,11 @@ You should now have returned to SD Maid and the previously orange entry is green
 [[[ https://cloud.githubusercontent.com/assets/1439229/14230455/7b4b0fe6-f958-11e5-9b1a-2bbb5a7d972e.png | height = 300px]]](https://cloud.githubusercontent.com/assets/1439229/14230455/7b4b0fe6-f958-11e5-9b1a-2bbb5a7d972e.png)
 [[[ https://cloud.githubusercontent.com/assets/1439229/14230457/7f1a8e62-f958-11e5-8713-951b4500f49e.png | height = 300px]]](https://cloud.githubusercontent.com/assets/1439229/14230457/7f1a8e62-f958-11e5-8713-951b4500f49e.png)
 
-### Issues
+### Troubleshooting
+
+<details>
+<summary>(click to expand)</summary>
+
 #### Documents window is empty (shows no sdcards)
 On some devices the `Documents` app that opens after pressing the orange entry is empty. No storage can be chosen despite having clicked `Show sdcards`. This means that your ROM (not SD Maid) does not correctly recognize your extra storage. A few Galaxy (S7/Note4) have this issue, seems to depend on how/when the sdcard was setup.
 
@@ -82,6 +86,8 @@ Despite successfully granting storage access, after rebooting the procedure has 
 ##### Known solutions
 * Move SD Maid back to internal storage
 
+</details>
+
 ## Usage Statistics permission
 To accurately determine app and cache sizes SD Maid asks for the `Usage Statistics` permission, which allows SD Maid to query the system for additional app details. The method that SD Maid previously used for this purpose was locked down in Android 8.0. Features related to the AppControl and [AppCleaner tool](https://github.com/d4rken/sdmaid-public/wiki/AppCleaner#accessibility-service) require this permission.
 
@@ -93,7 +99,11 @@ To accurately determine app and cache sizes SD Maid asks for the `Usage Statisti
 ## Binary setup
 Binaries are extra files that SD Maid sets up on first run. These binaries are required for SD Maid to run. SD Maid itself has compatible binaries for the architectures X86, MIPS and ARM. Normally this all happens automatically and you don't have to do anything.
 
-### Busybox error
+### Troubleshooting
+
+<details>
+<summary>(click to expand)</summary>
+
 The busybox binary is a mandatory file that needs to be setup, if this is not possible SD Maid can not continue. It is usually located in `/data/data/eu.thedarken.sdm/files/busybox`, but may also be placed in other location to circumvent root restrictions on specific ROMs (also see: [binary status](https://github.com/d4rken/sdmaid-public/wiki/Overview#binary-status)).
 
 [[[https://cloud.githubusercontent.com/assets/1439229/14926312/e2b5c8da-0e4b-11e6-802f-b7436bed07b3.png | height = 300px]]](https://cloud.githubusercontent.com/assets/1439229/14926312/e2b5c8da-0e4b-11e6-802f-b7436bed07b3.png)
@@ -128,3 +138,5 @@ It's unlikely, but possible that your device has a cpu architecture for which SD
 ##### Known solutions
 * Install a compatible binary into your system which SD Maid can access.
 * Email SD Maids developer and ask if it possible to create a compatible binary.
+
+</details>
