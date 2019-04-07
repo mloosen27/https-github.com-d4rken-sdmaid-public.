@@ -43,21 +43,36 @@ These filteres have specific targets such as certain filetypes or just one speci
 ## Settings
 ### Include System-Apps
 Whether system apps should be included in the results.
+
 ### Sort mode
 How the results should be sorted.
+
 ### Minimum cache age
 SD Maid can filter out files that are below a minimum cache age (in days), e.g. keep files newer than `x` days. Generally speaking, cache is not a bad thing, so this setting allows for a compromise between performance and storage space. The default setting of `0` means that no age filter is applied and the maximum amount of files are suggested for deletion.
 Note that SD Maid can not enforce this for all files on unrooted devices. See FAQ regarding exclusions and `freeStorageAndNotify`.
+
 ### Skip running apps
 Skip currently running apps. If running apps are not skipped they are killed before deleting their cache. Apps will be killed 'softly', i.e. using [killBackgroundProcesses](https://developer.android.com/reference/android/app/ActivityManager.html#killBackgroundProcesses(java.lang.String)), even if root is available. For a running app the event will be similar to being killed in low memory situations. Killed background services may restart at will.
+
 ### Show inaccessible items
-Some items, especially on 6.0+ without root may be known to SD Maid, but can't be accessed (i.e. deleted).
+Some items may be known to SD Maid on unrooted devices, but can't be accessed directly (i.e. deleted). This is usually the private default cache at `/data/user/0/<pkg>/cache`. When this option is activated, SD Maid will query the system for an app's cache size and if available display a fake file for that location with the size the system has returned. 
+
+This feature requires the ["Usage Statistics" permission](https://github.com/d4rken/sdmaid-public/wiki/Setup#usage-statistics-permission) on Android 8.0+. 
+
+Activating the ["accessibility service feature"](https://github.com/d4rken/sdmaid-public/wiki/AppCleaner#accessibility-service) implicitly activates this feature too.
 
 ### freeStorageAndNotify
 `freeStorageAndNotify` is a trick that can be used on some ROMs (< Android 6.0) to clear private caches without root. It basically triggers the `System>Storage>Clear Cache` action. This can be turned off because using it also clears the default public caches. If you have cache files in public caches that you don't want deleted, e.g. have exclusions for, you have to disable this function such that SD Maids exclusions can take effect (because using this function outsources some work to the system which doesn't know about SD Maids exclusions).
 
 ### Accessibility service
+When this feature is activated, and you use the AppCleaner, and SD Maid is on screen (this doesn't work via Scheduler), then SD Maid will open the system's settings window for each app and click the `Clear cache` button as fast as the system allows it.
+
+Cache cleaning via accessibility service is the only way to clean private app caches on Android 6.0+ without root. This features requires SD Maid's accessibility service to be enabled in the system settings.
+
+This feature requires ["Usage Statistics" permission](https://github.com/d4rken/sdmaid-public/wiki/Setup#usage-statistics-permission) to be granted on Android 8.0+ as it implicitly enables the option "Show inaccessible items".
+
 [[[ https://cloud.githubusercontent.com/assets/1439229/19081897/360e14b0-8a5c-11e6-81a5-0bf10d6acd01.png | height = 300px]]](https://cloud.githubusercontent.com/assets/1439229/19081897/360e14b0-8a5c-11e6-81a5-0bf10d6acd01.png)
+[[[ https://user-images.githubusercontent.com/1439229/55688219-7c6c5c00-5976-11e9-8d9d-b9ab554f7145.png | height = 300px]]](https://user-images.githubusercontent.com/1439229/55688219-7c6c5c00-5976-11e9-8d9d-b9ab554f7145.png)
 
 ## FAQ
 ### When to use it?
