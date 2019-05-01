@@ -135,6 +135,9 @@ Current upgrades:
 ### Why are there two SD Maid apps?
 SD Maid consists of two apps, the free app and a paid app. The paid app is a plugin that enables extra features in the free app. The paid app can't be used alone, while the free app (sans pro features) can be used on its own. This is mainly for historical reasons as IAPs (In-App-Purchases) did not exist 5 years ago when SD Maid launched. While this will probably change at some point, it currently also has the advantage that there is no dependency on Google-Services to enable in-app-purchases.
 
+### On how many devices can I use SD Maid?
+On as many devices as you like, if they all use the same Google account. If you are trying to install it to another device with the same account and it asks you to pay again, [see here](https://github.com/d4rken/sdmaid-public/wiki/Frequently-Asked-Questions#google-play-is-not-showing-the-purchase).
+
 ### Factory-Reset / Device-Change
 This is not an SD Maid issue, but still a popular question. Apps purchased through Google Play are tied to your Google account, not your device. If you use the same Google account on a new or factory reset device, you will have access to all previous purchases.
 
