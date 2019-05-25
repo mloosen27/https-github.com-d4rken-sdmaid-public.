@@ -1,4 +1,7 @@
 # Settings
+SD Maid is a very configurable app. The default settings are chosen to be safe and easy to use. They are aimed towards new users that just want to get the job done, quick and easy. SD Maid can be setup to be much more thorough and effective, but this will require some tweaking and oversight by you.
+The general way to that is: Enable additional filters and options, let SD Maid scan again, review the results, add exclusions where necessary and repeat this for every tool where you are changing options.
+
 ## General 
 
 [[[ https://cloud.githubusercontent.com/assets/1439229/20633161/f5d047ea-b343-11e6-9774-b3b06542ccdf.png | height = 300px]]](https://cloud.githubusercontent.com/assets/1439229/20633161/f5d047ea-b343-11e6-9774-b3b06542ccdf.png)
