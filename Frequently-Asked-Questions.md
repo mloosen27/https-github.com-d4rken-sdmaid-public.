@@ -5,7 +5,6 @@
   * [Does SD Maid only work on sdcards?](https://github.com/d4rken/sdmaid-public/wiki/Frequently-Asked-Questions#does-sd-maid-only-work-on-sdcards)
   * [Recover deleted files](https://github.com/d4rken/sdmaid-public/wiki/Frequently-Asked-Questions#recover-deleted-files)
   * [Hanging](https://github.com/d4rken/sdmaid-public/wiki/Frequently-Asked-Questions#hanging)
-  * [External storage and Android 4.4](https://github.com/d4rken/sdmaid-public/wiki/Frequently-Asked-Questions#external-storage-and-android-44)
   * [SD Maid v2/v3/v4](https://github.com/d4rken/sdmaid-public/wiki/Frequently-Asked-Questions#sd-maid-v2v3v4)
   * [Screen overlay detected](https://github.com/d4rken/sdmaid-public/wiki/Frequently-Asked-Questions#screen-overlay-detected)
 * [SD Maid Pro](https://github.com/d4rken/sdmaid-public/wiki/Frequently-Asked-Questions)
@@ -13,6 +12,7 @@
   * [Why are there two SD Maid apps?](https://github.com/d4rken/sdmaid-public/wiki/Frequently-Asked-Questions#why-are-there-two-sd-maid-apps)
   * [Factory-Reset / Device-Change](https://github.com/d4rken/sdmaid-public/wiki/Frequently-Asked-Questions#factory-reset--device-change)
   * [Google Play is not showing the purchase](https://github.com/d4rken/sdmaid-public/wiki/Frequently-Asked-Questions#google-play-is-not-showing-the-purchase)
+  * [Unlocker update required](https://github.com/d4rken/sdmaid-public/wiki/Frequently-Asked-Questions#Unlocker-update-required)
   * [Google Play is asking me to buy the app again](https://github.com/d4rken/sdmaid-public/wiki/Frequently-Asked-Questions#google-play-is-asking-me-to-buy-the-app-again)
   * [SD Maid is not enabling the pro features](https://github.com/d4rken/sdmaid-public/wiki/Frequently-Asked-Questions#sd-maid-is-not-enabling-the-pro-features)
   * [I can't find SD Maid Pro on my device](https://github.com/d4rken/sdmaid-public/wiki/Frequently-Asked-Questions#i-cant-find-sd-maid-pro-on-my-device)
@@ -77,19 +77,6 @@ Sometimes it may look like SD Maid is hanging during a task. Make sure to wait a
 
 A common cause for huge slowdowns, i.e. SD Maid seeming "stuck", are faulty sdcards. If the sdcard is damaged and/or the filesystem is corrupted the I/O performance drops drastically. To confirm this, remove the sdcard and try again. If your sdcard is faulty I would strongly advise to backup all your data from it. In some cases formating "seems" to fix the sdcard again but I would recommand to not risk it and just replace it.
 
-### External storage and Android 4.4
-Write access to external (removable) storage is not possible on Android 4.4. Files can only be read, not modified. This means that non-system apps can neither delete, edit or create files on the external storage outside of a few specific directories, e.g. music apps can't edit `. mp3` and SD Maid can't delete files.
-
-There are only 4 solutions:
-* Upgrade the device to Android 5.0 or later.
-* Downgrade the device to Android 4.3 or earlier.
-* Root the device and modify the ROM to exhibit pre Android 4.4 behavior (for apps that can't use root permission).
-* Root the device and allow the app to use root permission.
-
-External (removable) sdcards were never officially supported by Android up until Android 4.4+. Prior to Android 4.4 device manufactors applied workarounds where they mounted the external storage to an arbitrary location and grouped it toegether with the normal workaround by mounting the removable sdcard somewhere on the device and changing the ROM to grant access to both internal and external public storage when the permission [WRITE_EXTERNAL_STORAGE](https://developer.android.com/reference/android/Manifest.permission.html#WRITE_EXTERNAL_STORAGE) is granted to apps. Android 4.4 officially introduced a way to get the path of the external sdcard and an additional permission for it named `WRITE_MEDIA_STORAGE`, but this permission is only available to system apps. For unknown reasons (possibly pressure from Google), manufactors also stopped applying their workaround in Android 4.4, leaving apps without a way to gain write access to external sdcards on Android 4.4. Android 5.0 expanded the [Storage Access Framework (SAF)](https://developer.android.com/guide/topics/providers/document-provider.html), which made it possible (although complicated) to gain write access to external storage again. Users stuck on Android 4.4 seem to have been forgotten by both Google and device manufactors.
-
-☹️ 
-
 ### SD Maid v2/v3/v4
 There are different versions available of SD Maid. Every few years SD Maid was completely overhauled to improve it through gained experience and to adopt to new Android environments. During these overhauls the minimum required Android version is usually raised due reduce workload, maintaining compatibility "hacks" for very old Android versions is usually not feasible when supporting the newest Android versions.
 
@@ -136,10 +123,17 @@ Current upgrades:
 SD Maid consists of two apps, the free app and a paid app. The paid app is a plugin that enables extra features in the free app. The paid app can't be used alone, while the free app (sans pro features) can be used on its own. This is mainly for historical reasons as IAPs (In-App-Purchases) did not exist 5 years ago when SD Maid launched. While this will probably change at some point, it currently also has the advantage that there is no dependency on Google-Services to enable in-app-purchases.
 
 ### On how many devices can I use SD Maid?
+#### Via Google Play
 On as many devices as you like, if they all use the same Google account. If you are trying to install it to another device with the same account and it asks you to pay again, [see here](https://github.com/d4rken/sdmaid-public/wiki/Frequently-Asked-Questions#google-play-is-not-showing-the-purchase).
+
+#### Via apps.darken.eu
+There is currently a limit of 10 simultaneous devices. Once reached you have to remove older devices via the website. Exceptions are possible though, just send me a mail :wink:.
 
 ### Factory-Reset / Device-Change
 This is not an SD Maid issue, but still a popular question. Apps purchased through Google Play are tied to your Google account, not your device. If you use the same Google account on a new or factory reset device, you will have access to all previous purchases.
+
+### Unlocker update required
+When upgrading to SD Maid Pro by using the unlocker app, the two apps should both be kept updated. If the unlocker app is too old SD Maid will display the setup process and ask you to upgrade. There will be an upgrade button that takes you to the [Google Play entry for the unlocker](https://play.google.com/store/apps/details?id=eu.thedarken.sdm.unlocker). If you did not buy the unlocker app with the Google account you are currently signed into then Google Play does not offer you the option to upgrade and only shows buttons for `Open` and `Remove`. This usually happens by upgrading to a new device and or switching switching Google accounts. Find and log in with the right Google Account and the update option will appear.
 
 ### Google Play is not showing the purchase
 Apps are purchased per Google account, not per device. Switching devices doesn't mean you have to buy an app again. If Google Play is not showing your purchase, you are either not logged in with the account your purchased the application with or the Google Play app has not yet syncronized with your list of purchases. You can see your purchases [here](https://wallet.google.com/manage/#transactions:filter=ALL) or [here](https://play.google.com/apps). This is a Google Play issue and has no relation to SD Maid itself.
