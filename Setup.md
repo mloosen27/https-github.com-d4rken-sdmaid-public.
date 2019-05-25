@@ -96,6 +96,26 @@ To accurately determine app and cache sizes SD Maid asks for the `Usage Statisti
 [[[https://user-images.githubusercontent.com/1439229/55668474-1941d300-586b-11e9-9c1b-305a5a234814.png | height = 300px]]](https://user-images.githubusercontent.com/1439229/55668474-1941d300-586b-11e9-9c1b-305a5a234814.png)
 [[[https://user-images.githubusercontent.com/1439229/55668476-1ba42d00-586b-11e9-92b1-3932f2135168.png | height = 300px]]](https://user-images.githubusercontent.com/1439229/55668476-1ba42d00-586b-11e9-92b1-3932f2135168.png)
 
+
+### External storage and Android 4.4
+Write access to external (removable) storage is not possible on Android 4.4. Files can only be read, not modified. This means that non-system apps can neither delete, edit or create files on the external storage outside of a few specific directories, e.g. music apps can't edit `. mp3` and SD Maid can't delete files.
+
+### Troubleshooting
+
+<details>
+<summary>(click to expand)</summary>
+
+There are only 4 solutions:
+* Upgrade the device to Android 5.0 or later.
+* Downgrade the device to Android 4.3 or earlier.
+* Root the device and modify the ROM to exhibit pre Android 4.4 behavior (for apps that can't use root permission).
+* Root the device and allow the app to use root permission.
+
+External (removable) sdcards were never officially supported by Android up until Android 4.4+. Prior to Android 4.4 device manufactors applied workarounds where they mounted the external storage to an arbitrary location and grouped it toegether with the normal workaround by mounting the removable sdcard somewhere on the device and changing the ROM to grant access to both internal and external public storage when the permission [WRITE_EXTERNAL_STORAGE](https://developer.android.com/reference/android/Manifest.permission.html#WRITE_EXTERNAL_STORAGE) is granted to apps. Android 4.4 officially introduced a way to get the path of the external sdcard and an additional permission for it named `WRITE_MEDIA_STORAGE`, but this permission is only available to system apps. For unknown reasons (possibly pressure from Google), manufactors also stopped applying their workaround in Android 4.4, leaving apps without a way to gain write access to external sdcards on Android 4.4. Android 5.0 expanded the [Storage Access Framework (SAF)](https://developer.android.com/guide/topics/providers/document-provider.html), which made it possible (although complicated) to gain write access to external storage again. Users stuck on Android 4.4 seem to have been forgotten by both Google and device manufactors.
+
+☹️ 
+</details>
+
 ## Binary setup
 Binaries are extra files that SD Maid sets up on first run. These binaries are required for SD Maid to run. SD Maid itself has compatible binaries for the architectures X86, MIPS and ARM. Normally this all happens automatically and you don't have to do anything.
 
