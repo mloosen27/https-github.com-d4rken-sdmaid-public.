@@ -135,7 +135,7 @@ This is not an SD Maid issue, but still a popular question. Apps purchased throu
 ### Unlocker update required
 When upgrading to SD Maid Pro by using the unlocker app, the two apps should both be kept updated. If the unlocker app is too old SD Maid will display the setup process and ask you to upgrade. There will be an upgrade button that takes you to the [Google Play entry for the unlocker](https://play.google.com/store/apps/details?id=eu.thedarken.sdm.unlocker).
 
-If the Google account you are currently signed into does not contain a purchase for the [unlocker app](https://play.google.com/store/apps/details?id=eu.thedarken.sdm.unlocker) then the Google Play app does not offer you the option to upgrade and only shows buttons for `Open` and `Remove`. This can happen when upgrading to a new device and/or switching switching Google accounts. You need to find and log into Google Play [with the right Google Account](https://pay.google.com/payments/u/0/home) and the update option will appear. If all else fails, mail me.
+If the Google account you are currently signed into does not contain a purchase for the [unlocker app](https://play.google.com/store/apps/details?id=eu.thedarken.sdm.unlocker) then the Google Play app does not offer you the option to upgrade and only shows buttons for `Open` and `Remove`. This can happen when upgrading to a new device and/or switching Google accounts. You need to find and log into Google Play [with the right Google Account](https://pay.google.com/payments/u/0/home) and the update option will appear. If all else fails, mail me.
 
 
 
