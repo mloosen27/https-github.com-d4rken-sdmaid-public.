@@ -71,6 +71,10 @@ Cache cleaning via accessibility service is the only way to clean private app ca
 
 This feature requires ["Usage Statistics" permission](https://github.com/d4rken/sdmaid-public/wiki/Setup#usage-statistics-permission) to be granted on Android 8.0+ as it implicitly enables the option "Show inaccessible items".
 
+####  Troubleshooting
+* On BlackBerry devices the ["Power Centre" app](https://github.com/d4rken/sdmaid-public/issues/2628) may be killing the service.
+* If you are getting an error about ROM & locale then SD Maid does not understand your devices language, create an issue ticket and provide the [necessary details](https://github.com/d4rken/sdmaid-public/issues/2396)
+
 [[[ https://cloud.githubusercontent.com/assets/1439229/19081897/360e14b0-8a5c-11e6-81a5-0bf10d6acd01.png | height = 300px]]](https://cloud.githubusercontent.com/assets/1439229/19081897/360e14b0-8a5c-11e6-81a5-0bf10d6acd01.png)
 [[[ https://user-images.githubusercontent.com/1439229/55688219-7c6c5c00-5976-11e9-8d9d-b9ab554f7145.png | height = 300px]]](https://user-images.githubusercontent.com/1439229/55688219-7c6c5c00-5976-11e9-8d9d-b9ab554f7145.png)
 
