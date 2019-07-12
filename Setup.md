@@ -159,4 +159,16 @@ It's unlikely, but possible that your device has a cpu architecture for which SD
 * Install a compatible binary into your system which SD Maid can access.
 * Email SD Maids developer and ask if it possible to create a compatible binary.
 
+[[[https://user-images.githubusercontent.com/1439229/52639639-ff23ee00-2ed4-11e9-9845-c605ededc4fd.jpg | height = 300px]]](https://user-images.githubusercontent.com/1439229/52639639-ff23ee00-2ed4-11e9-9845-c605ededc4fd.jpg)
+
+In some cases SD Maid can setup a binary but not gather a complete set of applets that pass all of SD Maids tests. While SD Maid also tries to use native applets, provided directly by the system, they may not offer all applet options that SD Maid requires
+
+#### Cause: Incompatible kernel/ROM
+Your system may have specific properties that cause SD Maid's own set of applets to fail and the system's applets don't pass the tests.
+
+##### Known solutions
+* Install a compatible binary into your system which SD Maid can access.
+* Email SD Maids developer and help debug the issue, in some cases SD Maid's tests can be adjusted to pass on 
+ specific systems.
+
 </details>
