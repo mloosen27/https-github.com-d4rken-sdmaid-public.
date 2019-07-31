@@ -157,7 +157,7 @@ If the both SD Maid (`eu.thedarken.sdm`) and the SD Maid Pro plugin/unlocker (`e
 Known solutions:
 * Force close SD Maid or reboot the device and reopen SD Maid
 * The system did not correctly install either SD Maid or the unlocker. Uninstall both apps, reboot your device, install the unlocker app first, then SD Maids free version.
-* If either SD Maid or the unlocker has been modified the pro features will also not be unlocked. Ensure that you downloaded the apps from official sources (Google Play or [my server](sdmaid.darken.eu/download)) and that no app on your device modified them. There are some "security apps" that modify installed apps for questionable purporses.
+* If either SD Maid or the unlocker has been modified the pro features will also not be unlocked. Ensure that you downloaded the apps from official sources (Google Play or [my server](https://sdmaid.darken.eu/download)) and that no app on your device modified them. There are some "security apps" that modify installed apps for questionable purporses.
 
 ### I can't find SD Maid Pro on my device
 The SD Maid Pro plugin only has to be installed, but does not have to be actively launched. Due to this this the app contains an option that will hide its shortcut from your app drawer. To display the shortcut again, either uninstall and reinstall the app, or open SD Maids advanced settings which offers an option to do that.
