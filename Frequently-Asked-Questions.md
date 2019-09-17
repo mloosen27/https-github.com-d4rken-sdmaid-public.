@@ -30,6 +30,10 @@
 * After completing the setup, SD Maid will run the "scan" part of each tool.
 * When the scan finishes you can press "execute" to delete/optimize, or press a specific tool to view more details.
 
+#### How do I configure SD Maid?
+SD Maid starts out with a default configuration that favors safety over thoroughness as every device is a little bit unique, just like you 😉.
+Each tool has options that can be reached either through a menu entry in the toolbar, or the global settings screen which you can reach through the main navigation menu. The options either include or exclude specific file types or categories. If you'd like SD Maid to delete more/less then you can enable/disable additional filters and options. After enabling new options, perform a scan and check that SD Maid displays the desired results. Create an [exclusion](https://github.com/d4rken/sdmaid-public/wiki/Exclusions) to exclude specific apps or files from SD Maids results.
+
 ### Why should I use SD Maid?
 **Because it's thorough and honest.**
 If you want a broom, you look for the one that cleans best, any other purchase argument is secondary. SD Maid v0.1 was released on [29.03.2011](http://forum.xda-developers.com/showpost.php?p=12482608&postcount=1). Years of learning and more experience, constant improvements and adaption to every new Android kink, make SD Maid what is is today.
