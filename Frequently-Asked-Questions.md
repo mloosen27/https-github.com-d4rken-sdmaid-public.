@@ -13,7 +13,6 @@
   * [Factory-Reset / Device-Change](https://github.com/d4rken/sdmaid-public/wiki/Frequently-Asked-Questions#factory-reset--device-change)
   * [Google Play is not showing the purchase](https://github.com/d4rken/sdmaid-public/wiki/Frequently-Asked-Questions#google-play-is-not-showing-the-purchase)
   * [Unlocker update required](https://github.com/d4rken/sdmaid-public/wiki/Frequently-Asked-Questions#Unlocker-update-required)
-  * [Google Play is asking me to buy the app again](https://github.com/d4rken/sdmaid-public/wiki/Frequently-Asked-Questions#google-play-is-asking-me-to-buy-the-app-again)
   * [SD Maid is not enabling the pro features](https://github.com/d4rken/sdmaid-public/wiki/Frequently-Asked-Questions#sd-maid-is-not-enabling-the-pro-features)
   * [I can't find SD Maid Pro on my device](https://github.com/d4rken/sdmaid-public/wiki/Frequently-Asked-Questions#i-cant-find-sd-maid-pro-on-my-device)
 * [Root](https://github.com/d4rken/sdmaid-public/wiki/Frequently-Asked-Questions#root)
