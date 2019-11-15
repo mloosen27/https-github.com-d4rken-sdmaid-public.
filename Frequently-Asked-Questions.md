@@ -165,6 +165,12 @@ Known solutions:
 ### I can't find SD Maid Pro on my device
 The SD Maid Pro plugin only has to be installed, but does not have to be actively launched. Due to this this the app contains an option that will hide its shortcut from your app drawer. To display the shortcut again, either uninstall and reinstall the app, or open SD Maids advanced settings which offers an option to do that.
 
+### Hiding the unlocker app on Android 10
+Google removed the ability for apps to hide themselves on Android 10+. Workarounds:
+
+* Some launcher apps have features that allow you to hide apps yourself (e.g. Nova Launcher).
+* On a computer, try [ADB](https://developer.android.com/studio/command-line/adb) with the command `adb shell pm disable eu.thedarken.sdm.unlocker`
+
 ## Root
 ### What is root?
 So what's this root everyone is talking about? Root is the name of a special user account on your device, a super user account with elevated privileges.
