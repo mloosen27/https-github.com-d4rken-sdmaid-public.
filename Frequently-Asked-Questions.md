@@ -15,6 +15,8 @@
   * [Unlocker update required](https://github.com/d4rken/sdmaid-public/wiki/Frequently-Asked-Questions#Unlocker-update-required)
   * [SD Maid is not enabling the pro features](https://github.com/d4rken/sdmaid-public/wiki/Frequently-Asked-Questions#sd-maid-is-not-enabling-the-pro-features)
   * [I can't find SD Maid Pro on my device](https://github.com/d4rken/sdmaid-public/wiki/Frequently-Asked-Questions#i-cant-find-sd-maid-pro-on-my-device)
+  * [Hiding the unlocker app on Android 10](https://github.com/d4rken/sdmaid-public/wiki/Frequently-Asked-Questions#hiding-the-unlocker-app-on-android-10)
+
 * [Root](https://github.com/d4rken/sdmaid-public/wiki/Frequently-Asked-Questions#root)
   * [What is root?](https://github.com/d4rken/sdmaid-public/wiki/Frequently-Asked-Questions#what-is-root)
   * [Does SD Maid only work with root?](https://github.com/d4rken/sdmaid-public/wiki/Frequently-Asked-Questions#does-sd-maid-only-work-with-root)
