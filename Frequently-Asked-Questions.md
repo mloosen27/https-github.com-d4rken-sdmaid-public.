@@ -118,14 +118,37 @@ Current upgrades:
 * A widget to execute the main tools.
 * File/app previews in all tools
 * A searchable history of SD Maids actions
-* Launcher shortcutus to specific tools
+* Launcher shortcuts to specific tools
 * Additional search options
 * Android 7.1 app icon shortcuts
 * (Forced) app moving to external storage on supported devices.
 * Sleeping well, knowing the developer is motivated to keep developing :tada: 
 
-### Why are there two SD Maid apps?
-SD Maid consists of two apps, the free app and a paid app. The paid app is a plugin that enables extra features in the free app. The paid app can't be used alone, while the free app (sans pro features) can be used on its own. This is mainly for historical reasons as IAPs (In-App-Purchases) did not exist 5 years ago when SD Maid launched. While this will probably change at some point, it currently also has the advantage that there is no dependency on Google-Services to enable in-app-purchases.
+### What is the difference between the purchase options?
+All purchase options get you SD Maid Pro with all the same app features. The difference lies in how you access SD Maid Pro.
+
+It's not possible to switch the purchase/unlock option without buying the upgrade again, some exceptions may apply.
+
+#### [Unlocker app](https://play.google.com/store/apps/details?id=eu.thedarken.sdm.unlocker)
+The unlocker app is the original way to unlock SD Maid. It was the first upgrade method available (~2011). It's an extra app that you buy and install.
+
+* ✔️ Can be shared through [Google Play Family Library](https://support.google.com/googleplay/answer/7007852)
+* ❗ You need Google Play to do the initial install and keep it updated.
+* ❌ You need to have two apps installed.
+
+#### [In-app purchase](https://play.google.com/store/apps/details?id=eu.thedarken.sdm)
+The in-app purchase was added (late ~2019) due to Android 10 no longer allowing unlocker apps to hide themselves. You purchase the upgrade from inside the free version.
+
+* ✔️ No extra app needs to be installed.
+* ❗ Does not work without Google Play / Google Play Services. 
+* ❌ In-app purchases can not be shared through [Google Play Family Library](https://support.google.com/googleplay/answer/7007852)
+
+#### [apps.darken.eu](https://apps.darken.eu/)
+This option was made available (early ~2019) so users without access to Google Play or the option to purchase something on Google Play can upgrade to SD Maid Pro.
+
+* ✔️ Doesn't require an extra app to be installed.
+* ✔️ Doesn't require Google Play or Google Play Services.
+* ❌ Requires an extra account on my server.
 
 ### On how many devices can I use SD Maid?
 #### Via Google Play
@@ -141,8 +164,6 @@ This is not an SD Maid issue, but still a popular question. Apps purchased throu
 When upgrading to SD Maid Pro by using the unlocker app, the two apps should both be kept updated. If the unlocker app is too old SD Maid will display the setup process and ask you to upgrade. There will be an upgrade button that takes you to the [Google Play entry for the unlocker](https://play.google.com/store/apps/details?id=eu.thedarken.sdm.unlocker).
 
 If the Google account you are currently signed into does not contain a purchase for the [unlocker app](https://play.google.com/store/apps/details?id=eu.thedarken.sdm.unlocker) then the Google Play app does not offer you the option to upgrade and only shows buttons for `Open` and `Remove`. This can happen when upgrading to a new device and/or switching Google accounts. You need to find and log into Google Play [with the right Google Account](https://pay.google.com/payments/u/0/home) and the update option will appear. If all else fails, mail me.
-
-
 
 ### Google Play is not showing the purchase
 Apps are purchased per Google account, not per device. Switching devices doesn't mean you have to buy an app again. If Google Play is not showing your purchase, you are either not logged in with the account your purchased the application with or the Google Play app has not yet syncronized with your list of purchases. You can see your purchases [here](https://wallet.google.com/manage/#transactions:filter=ALL) or [here](https://play.google.com/apps). This is a Google Play issue and has no relation to SD Maid itself.
@@ -172,6 +193,7 @@ Google removed the ability for apps to hide themselves on Android 10+. Workaroun
 
 * Some launcher apps have features that allow you to hide apps yourself (e.g. Nova Launcher).
 * On a computer, try [ADB](https://developer.android.com/studio/command-line/adb) with the command `adb shell pm disable eu.thedarken.sdm.unlocker`
+* Upgrading to SD Maid Pro through In-App-Purchase or through https://apps.darken.eu
 
 ## Root
 ### What is root?
