@@ -133,4 +133,9 @@ This only works while the phone is unlocked, open and not in use. Think of it as
 ~~SD Maid current doesn't use the accessibility service this way because it's neither fast nor convenient. There is an [on-going discussion](https://github.com/d4rken/sdmaid-public/issues/1588) about adding this here.~~ Support for [accessibility service based cache deletion](https://github.com/d4rken/sdmaid-public/wiki/AppCleaner#accessibility-service) was added in v4.14.0.
 
 ### Some AppCleaner exclusions don't work without root
-If you are using the AppCleaner on an unrooted device, you may have noticed that despite creating an exclusion for a specific app, it is still part of the scan results. This happens because we have to use the `freeStorageAndNotify` trick to delete the private cache files. Using this trick means that not SD Maid, but the system itself does the deletion and the system does not know about SD Maids exclusions. Since SD Maid v4.2.0+ `freeStorageAndNotify` can be turned off in the settings.
+If you are using the AppCleaner on an unrooted device, you may have noticed that despite creating an exclusion for a specific app, it is still part of the scan results. This happens because when functions are used to delete caches that SD Maid doesn't have direct access to. If we cause the system to delete caches files for us, then the system does not know about the exclusions.
+
+Affected functions:
+
+* `freeStorageAndNotify` 
+* Accessibility service
