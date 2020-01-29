@@ -191,7 +191,7 @@ The SD Maid Pro plugin only has to be installed, but does not have to be activel
 ### Hiding the unlocker app on Android 10
 Google removed the ability for apps to hide themselves on Android 10+. Workarounds:
 
-* Some launcher apps have features that allow you to hide apps yourself (e.g. Nova Launcher).
+* Some launcher apps have features that allow you to hide apps yourself (e.g. Nova Launcher, [Default Samsung Launcher](https://user-images.githubusercontent.com/1439229/73403222-50e4a480-42ef-11ea-89a0-e626c2294ccf.jpg)).
 * On a computer, try [ADB](https://developer.android.com/studio/command-line/adb) with the command `adb shell pm disable eu.thedarken.sdm.unlocker`
 * Upgrading to SD Maid Pro through In-App-Purchase or through https://apps.darken.eu
 
