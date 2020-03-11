@@ -41,35 +41,115 @@ To manually create a filter open the filter manager, switch to the "User" tab an
 SD Maid will not find the file under all of the pathes though. This means that if you create a filter using complete pathes check which path you are using before pulling your hair because a filter is not working. It is recommended to use the path listed in SD Maids [Overview](https://github.com/d4rken/sdmaid-public/wiki/Overview) which is the official path the Android system provides.
 
 ### Criteria
+Below criteria are ordered by evaluation order.
+The order also reflects how costly they are to evaluate as we want to abort as early as possible to keep good filtering performance.
+
 #### Label
+
 The head line used for the entry. 
+
 * JSON value `label`
 
 #### Description
+
 The entries description. 
+
 * JSON value `description`
 
 #### Identifier
+
 A unique identifier for the filter within SD Maid. If you create this filter from within SD Maid it will automatically be generated for you.
+
 * JSON value `identifier` (Valid values: Needs to end with ".scuf.sdm" (system cleaner user filter sd maid).)
 
 #### Color
+
 A hex color code for the filter. Can currently only be changed by editing the filter file.
+
 * JSON value `color` (Valid values: `#??????`)
 
 #### Root only
+
 Whether SD Maid should show the filter if root is not available. Can currently only be changed by editing the filter file.
+
 * JSON value `rootOnly` (Valid values: `true`,`false`)
 
 #### Target type
+
 If the target should be a file or directory.
+
 * JSON value `targetType` (Valid values: `FILE`,`DIRECTORY`)
 
+#### Maximum size
+
+The maximum size the target is allowed to be in bytes.
+
+* JSON value `maximumSize`
+
+#### Minimum size
+
+The minimum size the target has to be in bytes.
+
+* JSON value `minimumSize`
+
+#### Maximum age
+
+The maximum age the target can be in miliseconds.
+
+* A valid match fulfils `NOW - lastModification =< maximumAge`
+* JSON value `minimumAge`
+
+#### Minimum age
+
+The minimum age the target has to be in miliseconds.
+
+* A valid match fulfils `NOW - lastModification >= minimumAge`
+* JSON value `minimumAge`
+
+#### Base path
+
+A targets path has to start with one of these entries.
+
+* JSON array `mainPath`
+
+#### Path contains
+
+The targets path has to contain one of these strings
+
+* JSON array `pathContains`
+
+#### Name starts with
+
+The targets name has to start with one of these entries.
+
+* JSON array `possibleNameInits`
+
+#### Name ends with
+
+The targets name has to end with one of these entries.
+
+* JSON array `possibleNameEndings`
+  
+#### Exclusions
+
+The targets path should not contain any of these entries.
+
+* JSON array `exclusions`
+
+#### Regular expression
+
+A regular expression that will be applied to the whole path and has to match.
+
+* JSON array `regexes`
+
 #### Location
+
 If the target should be in a specific location on your device.
+
 * JSON array `locations`
 
-Valid values: 
+Valid values:
+
 * `SDCARD`, public primary and secondary storage
 * `PUBLIC_MEDIA`, Android/media on public primary and secondary storage
 * `PUBLIC_DATA`, Android/data on public primary and secondary storage
@@ -84,49 +164,6 @@ Valid values:
 * `DOWNLOAD_CACHE`, /cache
 * `DATA`, /data
 * `PORTABLE`, USB devices
- 
-#### Base path
-A targets path has to start with one of these entries.
-* JSON array `mainPath`
-
-#### Path contains
-The targets path has to contain one of these strings
-* JSON array `pathContains`
-
-#### Name starts with
-The targets name has to start with one of these entries.
-* JSON array `possibleNameInits`
-   
-#### Name ends with
-The targets name has to end with one of these entries.
-* JSON array `possibleNameEndings`
-  
-#### Exclusions
-The targets path should not contain any of these entries.
-* JSON array `exclusions`
-
-#### Maximum size
-The maximum size the target is allowed to be in bytes.
-* JSON value `maximumSize`
-
-#### Minimum size
-The minimum size the target has to be in bytes.
-* JSON value `minimumSize`
-
-#### Maximum age
-The maximum age the target can be in miliseconds.
-* A valid match fulfils `NOW - lastModification =< maximumAge`
-* JSON value `minimumAge`
-
-#### Minimum age
-The minimum age the target has to be in miliseconds.
-* A valid match fulfils `NOW - lastModification >= minimumAge`
-* JSON value `minimumAge`
-
-
-#### Regular expression
-A regular expression that will be applied to the whole path and has to match.
-* JSON array `regexes`
 
 [[[ https://cloud.githubusercontent.com/assets/1439229/17000496/2223cce4-4ec3-11e6-857b-837f99452205.png | height = 300px]]](https://cloud.githubusercontent.com/assets/1439229/17000496/2223cce4-4ec3-11e6-857b-837f99452205.png)
 [[[ https://cloud.githubusercontent.com/assets/1439229/17000497/2249845c-4ec3-11e6-8000-8e7c0b59b0e1.png | height = 300px]]](https://cloud.githubusercontent.com/assets/1439229/17000497/2249845c-4ec3-11e6-8000-8e7c0b59b0e1.png)
