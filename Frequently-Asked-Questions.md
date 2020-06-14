@@ -35,6 +35,14 @@
 SD Maid starts out with a default configuration that favors safety over thoroughness as every device is a little bit unique, just like you 😉.
 Each tool has options that can be reached either through a menu entry in the toolbar, or the global settings screen which you can reach through the main navigation menu. The options either include or exclude specific file types or categories. If you'd like SD Maid to delete more/less then you can enable/disable additional filters and options. After enabling new options, perform a scan and check that SD Maid displays the desired results. Create an [exclusion](https://github.com/d4rken/sdmaid-public/wiki/Exclusions) to exclude specific apps or files from SD Maids results.
 
+#### SD Maid is not finding/deleting everything
+SD Maids capabilities largely depend on the available read/write access. In most cases SD Maid will not show you results if they can't be deleted anyways. If SD Maid constantly shows you the same amount of files to delete, then a permission is likely missing. Here is a small checklist:
+
+* Have you successfully completed the setup, and not skipped the step where SD Maid asks you to select a path for [access to your secondary storage](https://github.com/d4rken/sdmaid-public/wiki/Setup#secondary-storage-setup)?
+* Is the [AppCleaner's accessibility service option](https://github.com/d4rken/sdmaid-public/wiki/AppCleaner#accessibility-service) enabled?
+* If your device is rooted, does SD Maid have root access?
+* If all else fails, turn it off and on again (reboot) ;) 
+
 ### Why should I use SD Maid?
 **Because it's thorough and honest.**
 If you want a broom, you look for the one that cleans best, any other purchase argument is secondary. SD Maid v0.1 was released on [29.03.2011](http://forum.xda-developers.com/showpost.php?p=12482608&postcount=1). Years of learning and more experience, constant improvements and adaption to every new Android kink, make SD Maid what is is today.
