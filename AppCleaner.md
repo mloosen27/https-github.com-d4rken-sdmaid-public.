@@ -143,3 +143,20 @@ Affected functions:
 
 * `freeStorageAndNotify` 
 * Accessibility service
+
+### Improving support for cache deletion via accessibility service
+Some devices and or languages differ too much for SD Maid to automatically understand what has to be done. In such cases SD Maid will either abort quickly with an error message (`Unsupported ...`) or the screen will flicker on each app and progress will be very slow (as SD Maid retries until giving up and moving to the next app).
+
+To add support in these cases, create a [new issue ticket](https://github.com/d4rken/sdmaid-public/issues/new) and provide 3 things:
+* A step by step description of what has to be clicked on which screen to clear the cache.
+* Screenshots of each screen mentioned in the step by step instructions, alternatively a video.
+* A debug log showing how SD Maid sees the screen.
+
+To record a debug log of SD Maids view:
+* Start a debug log recording [as described here](https://github.com/d4rken/sdmaid-public/wiki/Reporting-a-bug#debugrun-log)
+* While the recording is running, open SD Maid, open the debug menu (long press settings) and click "Debug Accessibility Service"
+* Now a toolbar should have appeared on the bottom and SD Maid will additionally record everything seen from SD Maid's point-of-view into the log file
+* Manually clear the cache for 1-2 apps
+* Stop the recording and attach it with the screens to your ticket
+
+Note that if something containing personal information became visible on screen while running "debug accessibility service" (incoming message) that this may be visible in the log, and you should consider repeating the process.
