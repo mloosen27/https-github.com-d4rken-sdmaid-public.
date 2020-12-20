@@ -76,8 +76,12 @@ This feature requires ["Usage Statistics" permission](https://github.com/d4rken/
 Also see [Exclusions](https://github.com/d4rken/sdmaid-public/wiki/AppCleaner#some-appcleaner-exclusions-dont-work-without-root).
 
 ####  Troubleshooting
-* On BlackBerry devices the ["Power Centre" app](https://github.com/d4rken/sdmaid-public/issues/2628) may be killing the service.
 * If you are getting an error about ROM & locale then SD Maid does not understand your devices language, create an issue ticket and provide the [necessary details](https://github.com/d4rken/sdmaid-public/issues/2396)
+* If you get an error message on deletion stating that the accessibility service is enabled but not running, try restarting the device. The service is launched by the system, if it crashes or is killed, the system may consider it unreliable and not launch it again until reboot. The underlying cause is not clear:
+    * There is currently no known error that could explain this, but if you record a logcat and spot an error, please open a ticket.
+    * On some devices apps are killed by "RAM cleaners" or "battery optimizers", it's plausible that the act of killing SD Maid also tears down the accessibility service and makes it look like the service crashed, from the systems point of view.
+    * Make sure SD Maid is placed in internal storage, not moved to external storage (i.e. App2SD etc.), if this is the solution for your device, please also open a ticket because I would like to better understand this behavior.
+    * On BlackBerry devices the ["Power Centre" app](https://github.com/d4rken/sdmaid-public/issues/2628) may be killing the service.
 
 [[[ https://cloud.githubusercontent.com/assets/1439229/19081897/360e14b0-8a5c-11e6-81a5-0bf10d6acd01.png | height = 300px]]](https://cloud.githubusercontent.com/assets/1439229/19081897/360e14b0-8a5c-11e6-81a5-0bf10d6acd01.png)
 [[[ https://user-images.githubusercontent.com/1439229/55688219-7c6c5c00-5976-11e9-8d9d-b9ab554f7145.png | height = 300px]]](https://user-images.githubusercontent.com/1439229/55688219-7c6c5c00-5976-11e9-8d9d-b9ab554f7145.png)
