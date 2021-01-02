@@ -171,4 +171,11 @@ Your system may have specific properties that cause SD Maid's own set of applets
 * Email SD Maids developer and help debug the issue, in some cases SD Maid's tests can be adjusted to pass on 
  specific systems.
 
+#### Cause: Moved to external storage
+[To keep compatibility with newer Android versions](https://github.com/d4rken/sdmaid-public/issues/2380), as well as older Android versions, SD Maid v5+ no longer supports being moved to external storage.
+
+##### Known solutions
+* Move SD Maid to internal storage.
+* Use a ROM that supplies a native sqlite binary.
+
 </details>
